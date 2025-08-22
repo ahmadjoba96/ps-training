@@ -4,9 +4,14 @@ using namespace std;
 
 int fib(int n)
 {
-	if (n == 1 || n == 2)
+	// First Time Visit
+	if (n == 1 || n == 2) {
 		return 1;
-	int ans = fib(n - 1) + fib(n - 2);
+	}
+	int before = fib(n - 1);
+	// Second Time Visit
+	int ans = before + fib(n - 2);
+	// Third Time Visit
 	return ans;
 }
 
